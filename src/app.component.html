@@ -1,0 +1,44 @@
+<!-- ngModel et ngModelChange reconnaissent le type des données portées par la balise input et traduisent en conséquence -->
+
+<!-- [ngModel] : dari vue-modèle ke vue -->
+<!-- (ngModelChange) : dari vue ke vue-modèle -->
+
+<input
+  type="checkbox"
+  [ngModel]="data().isOK"
+  (ngModelChange)="update({ isOK: $event })"
+/>
+
+<input
+  type="text"
+  [ngModel]="data().text"
+  (ngModelChange)="update({ text: $event })"
+/>
+
+<input
+  type="number"
+  [ngModel]="data().x"
+  (ngModelChange)="update({ x: $event })"
+/>
+
+<hr />
+<pre>{{ data() | json }}</pre>
+<hr />
+Encore une fois :
+<input
+  type="checkbox"
+  [ngModel]="data().isOK"
+  (ngModelChange)="update({ isOK: $event })"
+/>
+
+<input
+  type="text"
+  [ngModel]="data().text"
+  (ngModelChange)="update({ text: $event })"
+/>
+
+<input
+  type="number"
+  [ngModel]="data().x"
+  (ngModelChange)="update({ x: $event })"
+/>
